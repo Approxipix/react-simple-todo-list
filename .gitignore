@@ -1,0 +1,16 @@
+# dependencies
+node_modules
+
+# production
+build
+main.css
+
+# misc
+.DS_Store
+.env
+.vscode
+
+npm-debug.log
+.idea
+
+*.log

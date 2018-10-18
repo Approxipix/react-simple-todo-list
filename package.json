@@ -1,0 +1,29 @@
+{
+  "name": "Todo",
+  "version": "1.0.0",
+  "description": "React Todo List",
+  "author": "Yaroslav Afanasiev <yaroslav.afanassiev@gmail.com>",
+  "license": "ISC",
+  "scripts": {
+    "prestart": "npm run build:css",
+    "start": "react-scripts start && npm run watch:css ",
+    "build": "npm run build:css && react-scripts build",
+    "build:css": "node-sass-chokidar src/styles/main.scss -o src/styles",
+    "watch:css": "node-sass-chokidar src/styles -o src/styles --watch --recursive"
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-redux": "^5.0.7",
+    "react-router": "^3.2.1",
+    "react-router-redux": "^4.0.8",
+    "react-scripts": "^1.1.1",
+    "redux": "^3.7.2",
+    "redux-thunk": "^2.2.0"
+  },
+  "devDependencies": {
+    "babel-polyfill": "^6.26.0",
+    "node-sass-chokidar": "^1.2.0"
+  }
+}

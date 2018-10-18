@@ -1,0 +1,15 @@
+.header {
+	padding: 30px;
+	margin-bottom: 30px;
+
+	background-color: $white;
+	box-shadow: 0 5px 8px 0 rgba(0,0,0,0.4);
+}
+
+.header__title {
+	margin-bottom: 15px;
+
+	font-size: 28px;
+	font-weight: bold;
+	text-align: center;
+}

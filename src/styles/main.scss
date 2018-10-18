@@ -1,0 +1,25 @@
+// Adjustment variables
+$container-width: 70%;
+$body-font: "Roboto", "Arial", sans-serif;
+$mainfont-size: 14px;
+
+// Color
+$white: #fff;
+$black: #150b04;
+$light-blue: #7dadd3;
+$blue: #5e8dd3;
+$light-gray: #ebeff2;
+$gray: #797979;
+
+
+@import "base/fonts.scss";
+@import "base/normalize.scss";
+@import "base/adjustment.scss";
+
+@import "components/Header.scss";
+@import "components/Navigation.scss";
+@import "components/AddTodoItem";
+@import "components/TodoListItem";
+
+@import "pages/Home.scss";
+@import "pages/Todo.scss";

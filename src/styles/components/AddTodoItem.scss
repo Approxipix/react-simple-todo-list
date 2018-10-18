@@ -1,0 +1,43 @@
+.todo__form {
+	position: relative;
+	margin: 10px auto;
+	padding: 10px;
+}
+
+.todo__input {
+	width: 100%;
+	padding: 10px 45px 10px 20px;
+
+	color: $gray;
+
+	border-radius: 2em;
+	border: 1px solid #ccc;
+	outline: none;
+
+
+	&:focus {
+		border: 1px solid $light-blue;
+		color: $black
+	}
+}
+
+.todo__button {
+	position: absolute;
+	right: 20px;
+
+	padding: 7px;
+
+	color: #ccc;
+	line-height: 0;
+
+	border: 0;
+	background-color: transparent;
+	outline: none;
+
+	cursor: pointer;
+	transition: all 0.2s ease-in;
+
+	&:hover {
+		color: $gray;
+	}
+}

@@ -1,0 +1,26 @@
+.header__menu {
+	display: flex;
+	justify-content: center;
+
+	text-align: center;
+}
+
+.header__menu-button {
+	width: 150px;
+	margin: 0 10px;
+
+	font-weight: bold;
+	color: $light-blue;
+	line-height: 35px;
+	text-decoration: none;
+	text-transform: uppercase;
+
+	border: solid 1px $light-blue;
+	border-radius: 2em;
+	background-color: $white;
+
+	&:hover {
+		background-color: $blue;
+		color: #fff;
+	}
+}
