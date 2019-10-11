@@ -31,6 +31,4 @@ class AddTodoItem extends Component {
   }
 }
 
-AddTodoItem = connect()(AddTodoItem);
-
-export default AddTodoItem
+export default connect()(AddTodoItem)

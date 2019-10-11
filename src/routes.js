@@ -12,6 +12,6 @@ const routes = (
     <Route path="todo" component={Todo} />
     <Route path="/done" component={Done}/>
   </Route>
-)
+);
 
 export default routes

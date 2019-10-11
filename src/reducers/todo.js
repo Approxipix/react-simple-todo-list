@@ -11,17 +11,13 @@ export function todo(state = [], action) {
 
     case TYPES.UPDATE_TASK:
       index = findTask(action.payload.id);
-
       if (index === -1) { return state }
-
       items[index].update = action.payload.status;
       return items;
 
     case TYPES.TOGGLE_TASK:
       index = findTask(action.item._id);
-
       if (index === -1) { return state }
-
       items[index] = action.item;
       return items;
 
@@ -31,9 +27,7 @@ export function todo(state = [], action) {
 
     case TYPES.REMOVE_TASK:
       index = findTask(action.id);
-
       if (index === -1) { return state; }
-
       items.splice(index, 1);
       return items;
 

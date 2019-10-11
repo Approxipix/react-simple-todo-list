@@ -5,7 +5,7 @@ class TodoList extends PureComponent {
   render() {
     return (
       <div className="todo__wrapper">
-        { this.props.items.map((item, index) =>
+        {this.props.items.map((item, index) =>
           <TodoListItem key={index} item={item}/>
         )}
       </div>
