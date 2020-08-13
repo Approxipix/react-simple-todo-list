@@ -44,14 +44,20 @@ class TodoListItem extends Component {
           <i className="material-icons todo-item__checkbox-icon">
             {status === true ? "check_box" : "check_box_outline_blank"}
           </i>
-          <input id="checkbox" type="checkbox"
-                 className="todo-item__checkbox"
-                 onChange={this.handleStatus} defaultChecked={status}/>
+          <input
+            id="checkbox"
+            type="checkbox"
+            className="todo-item__checkbox"
+            onChange={this.handleStatus}
+            defaultChecked={status}
+          />
           <p className="todo-item__desc__text">{description}</p>
         </label>
-        <button type="button"
-                className="todo-item__button todo-item__button_remove"
-                onClick={() => this.handleDelete()}>
+        <button
+          type="button"
+          className="todo-item__button todo-item__button_remove"
+          onClick={() => this.handleDelete()}
+        >
           <i className="material-icons">delete_forever</i>
         </button>
       </div>
@@ -59,11 +65,9 @@ class TodoListItem extends Component {
   }
 }
 
-const mapDispatchToProps = (dispatch) => {
-  return {
-    updateTask: (id, data) => dispatch(updateTask(id, data)),
-    removeTask: (id) => dispatch(removeTask(id)),
-  };
-};
+const mapDispatchToProps = (dispatch) => ({
+  updateTask: (id, data) => dispatch(updateTask(id, data)),
+  removeTask: (id) => dispatch(removeTask(id)),
+});
 
 export default connect(null, mapDispatchToProps)(TodoListItem);

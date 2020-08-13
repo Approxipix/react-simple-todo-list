@@ -1,33 +1,25 @@
 import * as TYPES from '../constants/ActionTypes'
 import Api from '../services/todoAPI';
 
-function tasksLoaded(items) {
-  return {
-    type: TYPES.TASKS_LOADED,
-    items
-  };
-}
+const tasksLoaded = items => ({
+  type: TYPES.TASKS_LOADED,
+  items,
+});
 
-function taskChanged(item) {
-  return {
-    type: TYPES.TOGGLE_TASK,
-    item
-  };
-}
+const taskChanged = item => ({
+  type: TYPES.TOGGLE_TASK,
+  item,
+});
 
-function taskAdded(item) {
-  return {
-    type: TYPES.ADD_TASK,
-    item
-  };
-}
+const taskAdded = item => ({
+  type: TYPES.ADD_TASK,
+  item,
+});
 
-function taskRemoved(id) {
-  return {
-    type: TYPES.REMOVE_TASK,
-    id
-  };
-}
+const taskRemoved = id => ({
+  type: TYPES.REMOVE_TASK,
+  id,
+});
 
 export function getTodoList(params) {
   return (dispatch) => {

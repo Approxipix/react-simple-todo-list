@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
 
 class AddTodoItem extends Component {
   constructor(props) {
@@ -31,4 +30,4 @@ class AddTodoItem extends Component {
   }
 }
 
-export default connect()(AddTodoItem)
+export default AddTodoItem;

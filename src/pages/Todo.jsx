@@ -10,19 +10,19 @@ class TodoPage extends Component {
   }
 
   getTodoCompleteCount = () => {
-    let comleteTask = 0;
+    let completeTask = 0;
     for (let i = 0; i < this.props.items.length; i++) {
       if (this.props.items[i].status === true) {
-        comleteTask++;
+        completeTask++;
       }
     }
-    return comleteTask;
+    return completeTask;
   };
 
   getTodoProgressPercent = () => {
-    let comleteTask = this.getTodoCompleteCount();
+    let completeTask = this.getTodoCompleteCount();
     return (
-      comleteTask * 100 / this.props.items.length
+      completeTask * 100 / this.props.items.length
     );
   };
 
@@ -33,7 +33,7 @@ class TodoPage extends Component {
         <div className="section__wrapper">
           <AddTodoItem addTask={this.props.addTask} />
           <p className="todo__desc">
-            Comleted Task: {this.getTodoCompleteCount()} / {this.props.items.length}
+            Completed Task: {this.getTodoCompleteCount()} / {this.props.items.length}
           </p>
           <div className="todo__progress">
             <div className="todo__progress__bar"
@@ -49,12 +49,10 @@ class TodoPage extends Component {
 
 const mapStateToProps = ({ items }) => ({ items });
 
-const mapDispatchToProps = (dispatch) => {
-  return {
-    todoList: () => dispatch(getTodoList()),
-    addTask: (description) => dispatch(addTask(description)),
-  };
-};
+const mapDispatchToProps = (dispatch) => ({
+  todoList: () => dispatch(getTodoList()),
+  addTask: (description) => dispatch(addTask(description)),
+});
 
 export default connect(mapStateToProps, mapDispatchToProps)(TodoPage);
 

@@ -23,10 +23,8 @@ class Done extends Component {
 
 const mapStateToProps = ({ items, loading }) => ({ items, loading });
 
-const mapDispatchToProps = (dispatch) => {
-  return {
-    todoList: (params) => dispatch(getTodoList(params)),
-  };
-};
+const mapDispatchToProps = (dispatch) => ({
+  todoList: (params) => dispatch(getTodoList(params)),
+});
 
 export default connect(mapStateToProps, mapDispatchToProps)(Done);
